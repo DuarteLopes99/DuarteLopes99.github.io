@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects, Duarte Lopes</title>
+  <meta name="description" content="Technical projects by Duarte Lopes: football match video analysis, season forecasting, GPS load analysis, RAG pipelines, a retrieval API and research code.">
+  <meta name="theme-color" content="#1f5a38">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects, Duarte Lopes">
+  <meta property="og:description" content="Technical projects by Duarte Lopes: football match video analysis, season forecasting, GPS load analysis, RAG pipelines, a retrieval API and research code.">
+  <meta property="og:url" content="https://duartelopes99.github.io/projects.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/public-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__bar">
+      <a class="brand" href="index.html">Duarte Lopes</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="hero__field" aria-hidden="true"></div>
+      <h1 class="page-head__title">Projects</h1>
+      <p class="page-head__lead">Things I built to answer a question, to learn something, or because I needed them. All of them are public on GitHub.</p>
+      <nav class="page-toc" aria-label="On this page">
+        <ul>
+          <li><a href="#sports-title">Sports analytics</a></li>
+          <li><a href="#applied-title">Applied machine learning</a></li>
+          <li><a href="#research-title">Research code</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="section section--first" aria-labelledby="sports-title">
+      <div class="wrap">
+        <h2 class="section__subtitle" id="sports-title">Sports analytics</h2>
+        <ul class="entries">
+          <li class="entry">
+            <div class="entry__head">
+              <h3 class="entry__name"><a href="https://github.com/DuarteLopes99/football_video_evaluation">Match video analysis</a></h3>
+              <p class="entry__stack">Python, YOLO detection, tracking, pitch homography, expected goals</p>
+            </div>
+            <p class="entry__body">Takes a full match filmed from one camera and produces team and player statistics, expected goals, set pieces and a timeline of key moments with highlight clips. Players and ball are detected, tracked, split by team and mapped onto the pitch, then a written rulebook defines every statistic and how far to trust it. A local launcher runs the whole pipeline.</p>
+          </li>
+          <li class="entry">
+            <div class="entry__head">
+              <h3 class="entry__name"><a href="https://github.com/DuarteLopes99/Football-Stats-Data">Season forecasts and GPS load</a></h3>
+              <p class="entry__stack">Python, Streamlit, Monte Carlo simulation, tested package</p>
+            </div>
+            <p class="entry__body">Scrapes fixtures and results, builds league tables and simulates the remaining games to forecast the final standings. A second part tracks GPS data from my own training and matches: distance, sprints, top speed, load and how much sprinting is left in the second half. Analysis lives in a tested Python package that the dashboards call.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="applied-title">
+      <div class="wrap">
+        <h2 class="section__subtitle" id="applied-title">Applied machine learning</h2>
+        <ul class="entries">
+          <li class="entry">
+            <div class="entry__head">
+              <h3 class="entry__name"><a href="https://github.com/DuarteLopes99/DS-ML-Playground/tree/main/RAG-Experiment">RAG architecture comparison</a></h3>
+              <p class="entry__stack">Python, sentence-transformers, ChromaDB (HNSW), GPT-4o-mini</p>
+            </div>
+            <p class="entry__body">Four retrieval-augmented generation pipelines for product recommendations, compared on the same test queries: cosine-similarity retrieval and a ChromaDB vector store, each with and without an intent layer that applies business rules such as exclusions and age limits. An evaluation harness reports latency, token cost, retrieval counts and answer quality.</p>
+          </li>
+          <li class="entry">
+            <div class="entry__head">
+              <h3 class="entry__name"><a href="https://github.com/DuarteLopes99/DS-ML-Playground/tree/main/FastAPI">Document retrieval API</a></h3>
+              <p class="entry__stack">Python, FastAPI, TF-IDF, cosine similarity</p>
+            </div>
+            <p class="entry__body">A permission-aware retrieval API over a JSON knowledge base, with configurable top-k and similarity threshold, REST endpoints and interactive documentation.</p>
+          </li>
+          <li class="entry">
+            <div class="entry__head">
+              <h3 class="entry__name"><a href="https://github.com/DuarteLopes99/Personal_Finances">Personal finance pipeline</a></h3>
+              <p class="entry__stack">Python, HTML and JavaScript, Chart.js</p>
+            </div>
+            <p class="entry__body">Monthly bank exports go through a Python pipeline that removes duplicates and categorises transactions into one store, which is encrypted before it is committed. An HTML dashboard shows the results and can ingest new files in the browser, and a notebook walks through each step.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="research-title">
+      <div class="wrap">
+        <h2 class="section__subtitle" id="research-title">Research code</h2>
+        <ul class="entries">
+          <li class="entry">
+            <div class="entry__head">
+              <h3 class="entry__name"><a href="https://github.com/DuarteLopes99/FER_CoreCode">Knowledge distillation for emotion recognition</a></h3>
+              <p class="entry__stack">Python, PyTorch, MediaPipe landmarks</p>
+            </div>
+            <p class="entry__body">Code from my INESC TEC fellowship: dataset preparation for CK+ and RaFD, teacher training, and response-based distillation into small student models that use facial landmarks.</p>
+          </li>
+          <li class="entry">
+            <div class="entry__head">
+              <h3 class="entry__name"><a href="https://github.com/DuarteLopes99/Emotion-Recognition---Silhouette">Emotion silhouettes</a></h3>
+              <p class="entry__stack">Python, CNNs, face detection</p>
+            </div>
+            <p class="entry__body">Training and testing CNNs on original face images and on a landmark-based “emotion silhouette” representation, as studied in my thesis.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap site-footer__grid">
+      <div>
+        <h2 class="site-footer__title">Get in touch</h2>
+        <p class="site-footer__lead">Email is the quickest way to reach me.</p>
+        <p class="contact"><a class="contact__email" href="mailto:duarte.lopes99@hotmail.com">duarte.lopes99@hotmail.com</a></p>
+      </div>
+      <div class="contact">
+        <ul class="icon-links">
+          <li><a class="icon-link" href="https://github.com/DuarteLopes99" title="GitHub"><svg aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-github"/></svg><span class="visually-hidden">GitHub</span></a></li>
+          <li><a class="icon-link" href="https://www.linkedin.com/in/duarte-lopes-/" title="LinkedIn"><svg aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-linkedin"/></svg><span class="visually-hidden">LinkedIn</span></a></li>
+          <li><a class="icon-link" href="https://www.strava.com/athletes/146340595" title="Strava"><svg aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-strava"/></svg><span class="visually-hidden">Strava</span></a></li>
+          <li><a class="icon-link" href="https://www.zerozero.pt/jogador/duarte-lopes/1058239" title="zerozero player profile"><svg aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-zerozero"/></svg><span class="visually-hidden">zerozero player profile</span></a></li>
+        </ul>
+        <p class="cv-links">
+          <a href="cv.html">View CV</a>
+          <a href="assets/cv/Duarte_Lopes_CV.pdf" download><svg aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-download"/></svg>Download CV (PDF)</a>
+        </p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__legal">© 2026 Duarte Lopes</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
